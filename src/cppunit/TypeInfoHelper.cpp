@@ -7,6 +7,7 @@
 
 #if CPPUNIT_HAVE_GCC_ABI_DEMANGLE
 #include <cxxabi.h>
+#include <stdlib.h>
 #endif
 
 
@@ -16,7 +17,7 @@ CPPUNIT_NS_BEGIN
 std::string 
 TypeInfoHelper::getClassName( const std::type_info &info )
 {
-#if defined(CPPUNIT_HAVE_GCC_ABI_DEMANGLE)  &&  CPPUNIT_HAVE_GCC_ABI_DEMANGLE
+#if CPPUNIT_HAVE_GCC_ABI_DEMANGLE
 
   int status = 0;
   char* c_name = 0;

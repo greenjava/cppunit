@@ -279,7 +279,7 @@ inline OStream &stdCErr()
 
 CPPUNIT_NS_END
 
-#elif CPPUNIT_HAVE_SSTREAM // #if defined( CPPUNIT_NO_STREAM )
+#elif CPPUNIT_HAVE_SSTREAM // #if CPPUNIT_NO_STREAM
 # include <sstream>
 # include <fstream>
 
